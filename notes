@@ -1,0 +1,24 @@
+#github steps when saving your code during your project
+
+
+1. git add . 
+2.git commit -m"some message goes here"
+3.git push origin master 
+
+
+Things I need to do for this project 
+
+
+1. Must be at least two levels deep 
+2. Must usea scrapper or an Api
+3. Get the informaiton from the APi and send it into objects   
+
+Steps on how to achieve this 
+
+
+Flow of project 
+1. Welcome the user to ColumbusBeer. 
+2. Ask the User what specific beer they would like for me to look up?
+3. I will then get the information from the API, SAve it to I can use it later and then Display all of the options?
+4. Then allow the user to choose a number or which defintion best associates with their needs, and it can then tell them more information about their beer selection 
+5. Just for fun, we're going to have a history of all the beers the user has searched. 
