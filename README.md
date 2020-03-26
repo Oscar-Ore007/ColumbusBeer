@@ -2,7 +2,7 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ColumbusBeer`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+Welcome to the ColumbusBeer application where you get to choose from our 10 best sellers provided by the kind folks of BrewDog Brewery! I hope you enjoy, and remember, please drink responsibly. 
 
 ## Installation
 
