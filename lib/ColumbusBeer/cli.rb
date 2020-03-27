@@ -5,6 +5,10 @@ class ColumbusBeer::CLI
         puts "What kind of Beer are you having? Press any key to view our selection"
         input = gets.chomp.downcase 
         ColumbusBeer::API.get_beers
+        menu 
+    end 
+
+    def menu 
         display_def
         more_options
         loop_or_exit
@@ -38,7 +42,11 @@ end
     def more_options
         puts "Please choose your beer selection! Type a number between 1-10"
         input = gets.chomp.to_i 
+       
+            if input.between?(1,10)
+            #I need to check to make sure its a valid index
         index = input - 1 
+        #I need to check to make sure its a valid index, if its not, they should restart the more options method 
         user_choice = ColumbusBeer::Beers.all[index]
         sleep (1)
         puts "Great choice! You selected: #{user_choice.name}".light_cyan
@@ -48,10 +56,21 @@ end
         sleep (1)
         puts "<><><><><><><><><><><><><><><><><><><><><><><><><><><><><>".light_red
         puts "#{user_choice.description}"
-    end 
+
+            else 
+                puts "........ Have you had to much to drink already?"
+                puts "Sorry, I didn't understand that. Please select a number between 1-10"
+                puts "<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>".light_green
+                sleep(2)
+                display_def
+                more_options
+        end 
+    end
 
     def exit 
+        sleep(1)
         puts "See ya next time, stay safe and tell you friends about us! O...H".light_red 
+        puts "I.....O".light_black
     end 
 
     def loop_or_exit 
@@ -59,7 +78,8 @@ end
         puts "Would you like to have another beer? Enter y/n"
         input = gets.chomp.downcase 
         if input == "y"
-            start
+            sleep (1)
+            menu 
         else 
         #    puts "Would you like to see your previous beer choices? Type y/n" 
         #    new_input = gets.chomp.downcase 
